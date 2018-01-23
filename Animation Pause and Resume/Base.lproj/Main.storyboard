@@ -1,24 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JVg-Dp-WR1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animation_Pause_and_Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXS-Xn-LIa">
+                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.93725490199999995" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NIl-2b-slH"/>
+                                    <constraint firstAttribute="height" constant="200" id="zWv-hV-io1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwE-pX-eUg">
+                                <rect key="frame" x="162.5" y="513.5" width="49" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="0.17254901960784313" green="0.22745098039215686" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="userTappedPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a36-f7-3kW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1058823529" green="0.61176470589999998" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uwE-pX-eUg" firstAttribute="top" secondItem="gXS-Xn-LIa" secondAttribute="bottom" constant="80" id="Dl1-jY-kYB"/>
+                            <constraint firstItem="gXS-Xn-LIa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KOd-Z0-XZB"/>
+                            <constraint firstItem="gXS-Xn-LIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gxx-Qf-Q7w"/>
+                            <constraint firstItem="uwE-pX-eUg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h89-qW-sTQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="pYO-vB-csw"/>
+                    <connections>
+                        <outlet property="circleView" destination="gXS-Xn-LIa" id="JeB-px-8SV"/>
+                        <outlet property="pauseButton" destination="uwE-pX-eUg" id="d0O-a5-Y8c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="658" y="-41"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="xyk-Ye-Rz5">
+            <objects>
+                <viewController id="m0g-eP-lPM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fSg-29-aSm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ULM-sv-ftV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="38P-Sc-er0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AfX-eP-ixh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="693"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Fko-8U-a7h">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JVg-Dp-WR1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8T0-4n-eJN">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vwy-Aq-E7d"/>
+                        <segue destination="m0g-eP-lPM" kind="relationship" relationship="viewControllers" id="pcE-zJ-QEX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obD-LC-DoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264" y="33.283358320839582"/>
         </scene>
     </scenes>
 </document>
